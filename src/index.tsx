@@ -7,12 +7,10 @@ import {App} from './containers/App';
 import UserModel from "./models/UserModel";
 import './assets/styles/main.scss'
 
-// prepare MobX stores
 const history = createBrowserHistory();
 const defautlUser = UserModel.create({name: 'Default Name'});
 const stores = createStores(history, defautlUser);
 
-// render react DOM
 ReactDOM.render(
   <Provider {...stores}>
     <App history={history}/>

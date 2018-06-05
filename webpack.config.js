@@ -112,7 +112,6 @@ module.exports = {
     },
     stats: 'minimal'
   },
-  // devtool: 'cheap-module-eval-source-map',
   node: {
     fs: 'empty',
     net: 'empty'

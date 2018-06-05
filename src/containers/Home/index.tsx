@@ -15,12 +15,6 @@ export class Main extends React.Component<MainProps, MainState> {
     this.state = {};
   }
 
-  componentWillMount() {
-  }
-
-  componentWillReceiveProps(nextProps: MainProps, nextContext: any) {
-  }
-
   render() {
     return (
       <>

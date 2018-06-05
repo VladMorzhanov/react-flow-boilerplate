@@ -22,7 +22,7 @@ const Wrapper = styled.header`
 export class Header extends React.Component<HeaderProps, HeaderState> {
   render() {
     return (
-      <Wrapper className="main-header">
+      <Wrapper>
         Header
       </Wrapper>
     );

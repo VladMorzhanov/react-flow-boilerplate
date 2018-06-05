@@ -29,7 +29,7 @@ export class Container extends React.Component<HeaderProps, HeaderState> {
     const rootStore: typeof RootStore.Type = this.props['rootStore'];
 
     return (
-      <Wrapper className="home-content">
+      <Wrapper>
         User: {rootStore.user.name}
       </Wrapper>
     );

@@ -1,11 +1,10 @@
 {
-  "name": "typescript-react-mobx-boilerplate",
+  "name": "graphql-react-boilerplate",
   "version": "1.0.0",
   "private": true,
-  "description": "A frontend boilerplate with React, MobX and Typescript",
+  "description": "GraphQL + React boilerplate written with Mobx, MST and styled-components.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --hot --progress --colors --port 3000",
     "build": "webpack -p --progress --colors"
   },
