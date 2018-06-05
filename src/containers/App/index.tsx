@@ -1,15 +1,20 @@
 import * as React from 'react';
 import {hot} from 'react-hot-loader';
 import {Route, Router, Switch} from 'react-router';
-import {Main} from "../Main";
+import {Main} from "../Home";
+import styled from 'styled-components'
 
-// render react DOM
+const Container = styled.div`
+  width: 100%;
+  height: 100%; 
+`;
+
 export const App = hot(module)(({ history }) => (
-  <div className="container">
+  <Container>
     <Router history={history}>
       <Switch>
         <Route path="/" component={Main} />
       </Switch>
     </Router>
-  </div>
+  </Container>
 ));

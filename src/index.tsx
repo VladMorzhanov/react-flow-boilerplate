@@ -17,5 +17,5 @@ ReactDOM.render(
   <Provider {...stores}>
     <App history={history}/>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('app')
 );

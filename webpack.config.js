@@ -18,7 +18,11 @@ module.exports = {
     chunkFilename: '[chunkhash].js',
     publicPath: '/'
   },
+  watchOptions: {
+    poll: true
+  },
   target: 'web',
+  devtool: 'source-map',
   resolve: {
     extensions: ['.js', '.ts', '.tsx'],
     mainFields: ['module', 'browser', 'main'],
@@ -45,7 +49,7 @@ module.exports = {
                 modules: true,
                 sourceMap: !isProduction,
                 importLoaders: 1,
-                localIdentName: '[local]__[hash:base64:5]'
+                localIdentName: '[local]'
               }
             },
             {
@@ -108,7 +112,7 @@ module.exports = {
     },
     stats: 'minimal'
   },
-  devtool: 'cheap-module-eval-source-map',
+  // devtool: 'cheap-module-eval-source-map',
   node: {
     fs: 'empty',
     net: 'empty'
