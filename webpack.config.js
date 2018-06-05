@@ -10,7 +10,7 @@ const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 module.exports = {
   context: sourcePath,
   entry: {
-    main: './main.tsx'
+    main: './index.tsx'
   },
   output: {
     path: outPath,
@@ -23,7 +23,7 @@ module.exports = {
     extensions: ['.js', '.ts', '.tsx'],
     mainFields: ['module', 'browser', 'main'],
     alias: {
-      'app': path.resolve(__dirname, 'src/app/')
+      'app': path.resolve(__dirname, 'src/')
     }
   },
   module: {

@@ -1,5 +1,5 @@
 import { types } from 'mobx-state-tree'
-import { UserModel } from 'app/models';
+import { UserModel } from '../models';
 
 export const RootStore = types
   .model('RootStore', {
