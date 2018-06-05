@@ -48,7 +48,6 @@ module.exports = {
                 localIdentName: '[local]__[hash:base64:5]'
               }
             },
-            'sass-loader',
             {
               loader: 'postcss-loader',
               options: {
@@ -63,7 +62,8 @@ module.exports = {
                   })
                 ]
               }
-            }
+            },
+            'sass-loader'
           ]
         })
       },

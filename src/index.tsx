@@ -5,6 +5,7 @@ import {createBrowserHistory} from 'history';
 import {createStores} from './stores';
 import {App} from './containers/App';
 import UserModel from "./models/UserModel";
+import './assets/styles/main.scss'
 
 // prepare MobX stores
 const history = createBrowserHistory();
