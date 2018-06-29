@@ -1,11 +1,7 @@
+// @flow
+
 import * as React from 'react';
 import styled from 'styled-components'
-
-export interface HeaderProps {
-}
-
-export interface HeaderState {
-}
 
 const Wrapper = styled.header`
   color: #ffffff;
@@ -19,7 +15,7 @@ const Wrapper = styled.header`
   line-height: 64px;
 `;
 
-export class Header extends React.Component<HeaderProps, HeaderState> {
+export class Header extends React.Component {
   render() {
     return (
       <Wrapper>
@@ -29,4 +25,4 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
   }
 }
 
-export default Header;
+export default Header

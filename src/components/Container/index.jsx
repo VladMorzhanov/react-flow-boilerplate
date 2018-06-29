@@ -1,13 +1,8 @@
-import * as React from 'react';
-import styled from 'styled-components';
-import {inject, observer} from "mobx-react";
-import {RootStore} from "../../stores";
+// @flow
 
-export interface HeaderProps {
-}
-
-export interface HeaderState {
-}
+import * as React from 'react'
+import styled from 'styled-components'
+import { inject, observer } from "mobx-react"
 
 const Wrapper = styled.div`
   display: flex;
@@ -20,20 +15,20 @@ const Wrapper = styled.div`
   background-color: #fff;
   align-items: center;
   justify-content: center;
-`;
+`
 
 @inject('rootStore')
 @observer
-export class Container extends React.Component<HeaderProps, HeaderState> {
+export class Container extends React.Component {
   render() {
-    const rootStore: typeof RootStore.Type = this.props['rootStore'];
+    const rootStore = this.props['rootStore']
 
     return (
       <Wrapper>
         User: {rootStore.user.name}
       </Wrapper>
-    );
+    )
   }
 }
 
-export default Container;
+export default Container
