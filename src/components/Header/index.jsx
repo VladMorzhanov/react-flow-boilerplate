@@ -1,7 +1,8 @@
 // @flow
 
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
+import { observer } from 'mobx-react'
 
 const Wrapper = styled.header`
   color: #ffffff;
@@ -15,10 +16,6 @@ const Wrapper = styled.header`
   line-height: 64px;
 `
 
-export class Header extends React.Component {
-  render() {
-    return <Wrapper>Header</Wrapper>
-  }
-}
+const Header = () => <Wrapper>Header</Wrapper>
 
-export default Header
+export default observer(Header)

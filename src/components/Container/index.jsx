@@ -1,6 +1,6 @@
 // @flow
 
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { inject, observer } from 'mobx-react'
 
@@ -17,14 +17,8 @@ const Wrapper = styled.div`
   justify-content: center;
 `
 
-@inject('rootStore')
-@observer
-export class Container extends React.Component {
-  render() {
-    const rootStore = this.props['rootStore']
+const Container = ({ rootStore }) => (
+  <Wrapper>User: {rootStore.user.name}</Wrapper>
+)
 
-    return <Wrapper>User: {rootStore.user.name}</Wrapper>
-  }
-}
-
-export default Container
+export default inject('rootStore')(observer(Container))

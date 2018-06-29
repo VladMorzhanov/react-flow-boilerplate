@@ -1,24 +1,15 @@
 // @flow
 
-import * as React from 'react'
+import React from 'react'
 import { inject, observer } from 'mobx-react'
 import Header from '../../components/Header'
 import Container from '../../components/Container'
 
-@inject('rootStore')
-@observer
-export class Main extends React.Component {
-  constructor(props, context) {
-    super(props, context)
-    this.state = {}
-  }
+const Main = ({ rootStore }) => (
+  <>
+    <Header />
+    <Container />
+  </>
+)
 
-  render() {
-    return (
-      <>
-        <Header />
-        <Container />
-      </>
-    )
-  }
-}
+export default inject('rootStore')(observer(Main))
