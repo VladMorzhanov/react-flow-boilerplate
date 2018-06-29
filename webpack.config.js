@@ -1,8 +1,5 @@
 const webpack = require('webpack')
 const path = require('path')
-const isProduction = process.argv.indexOf('-p') >= 0
-const sourcePath = path.join(__dirname, './src')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -10,18 +7,12 @@ const WebpackMd5Hash = require('webpack-md5-hash')
 
 module.exports = {
   devtool: 'eval',
-  entry: [
-    'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
-    './src/index'
-  ],
+  context: path.join(__dirname, 'src'),
+  entry: './index',
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/static/'
+    filename: 'bundle.js'
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
   resolve: {
     extensions: ['.js', '.jsx']
   },
@@ -53,11 +44,10 @@ module.exports = {
       filename: 'style.[contenthash].css'
     }),
     new HtmlWebpackPlugin({
-      inject: false,
-      hash: true,
-      template: './src/assets/index.html',
+      template: './index.html',
       filename: 'index.html'
     }),
+    new webpack.HotModuleReplacementPlugin(),
     new WebpackMd5Hash()
   ],
   node: {

@@ -16,6 +16,6 @@ const Wrapper = styled.header`
   line-height: 64px;
 `
 
-const Header = () => <Wrapper>Header</Wrapper>
+const Header = () => <Wrapper>Header Test</Wrapper>
 
 export default observer(Header)

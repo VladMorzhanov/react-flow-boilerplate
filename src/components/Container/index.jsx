@@ -18,7 +18,10 @@ const Wrapper = styled.div`
 `
 
 const Container = ({ rootStore }) => (
-  <Wrapper>User: {rootStore.user.name}</Wrapper>
+  <Wrapper>
+    User:
+    {rootStore.user.name}
+  </Wrapper>
 )
 
 export default inject('rootStore')(observer(Container))
