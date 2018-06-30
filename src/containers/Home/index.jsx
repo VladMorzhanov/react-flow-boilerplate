@@ -3,12 +3,14 @@
 import React from 'react'
 import { inject, observer } from 'mobx-react'
 import Header from '../../components/Header'
+import RootStore from '../../stores/RootStore'
 import Container from '../../components/Container'
 
-const Home = ({ rootStore }) => (
+const Home = ({ rootStore }: { rootStore: RootStore }): React.Element<*> => (
   <>
-    <Header />
-    <Container />
+    <Header title="Home Page" />
+    <Container content="Home page content" />
+    {rootStore.user}
   </>
 )
 

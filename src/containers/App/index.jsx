@@ -9,12 +9,15 @@ const Container = styled.div`
   height: 100%;
 `
 
-export const App = hot(module)(({ history }) => (
+const App = ({ history }: { history: History }): React.Element<*> => (
   <Container>
     <Router history={history}>
       <Switch>
         <Route path="/" component={Home} />
+        <Route path="/" component={Home} />
       </Switch>
     </Router>
   </Container>
-))
+)
+
+export default hot(module)(App)

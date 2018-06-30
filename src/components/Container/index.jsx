@@ -1,10 +1,24 @@
 // @flow
 
 import React from 'react'
-import styled from 'styled-components'
+import styled, { type ReactComponentStyled } from 'styled-components'
 import { inject, observer } from 'mobx-react'
+import RootStore from '../../stores/RootStore'
 
-const Wrapper = styled.div`
+type PropsType = {
+  display: string,
+  height: string,
+  width: string,
+  color: string,
+  'font-size': string,
+  'font-weight': string,
+  'font-family': string,
+  'background-color': string,
+  'align-items': string,
+  'justify-content': string
+}
+
+const Wrapper: ReactComponentStyled<PropsType> = styled.div`
   display: flex;
   height: calc(100% - 64px);
   width: 100%;
@@ -17,10 +31,16 @@ const Wrapper = styled.div`
   justify-content: center;
 `
 
-const Container = ({ rootStore }) => (
+const Container = ({
+  rootStore,
+  content
+}: {
+  rootStore: RootStore,
+  content: string
+}): React.Element<*> => (
   <Wrapper>
-    User:
-    {rootStore.user.name}
+    {content}
+    {rootStore.user}
   </Wrapper>
 )
 
