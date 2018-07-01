@@ -9,7 +9,7 @@ import RootStore from '../../stores/RootStore'
 const Profile = ({ rootStore }: { rootStore: RootStore }): React.Element<*> => (
   <>
     <Header title="Profile page" />
-    <Container content={rootStore.user} />
+    <Container content={rootStore.user.name} />
   </>
 )
 

@@ -10,7 +10,7 @@ const Home = ({ rootStore }: { rootStore: RootStore }): React.Element<*> => (
   <>
     <Header title="Home Page" />
     <Container content="Home page content" />
-    {rootStore.user}
+    {rootStore.user.name}
   </>
 )
 

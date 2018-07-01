@@ -11,7 +11,8 @@ module.exports = {
   entry: './index',
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   resolve: {
     extensions: ['.js', '.jsx']
@@ -50,6 +51,9 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new WebpackMd5Hash()
   ],
+  devServer: {
+    historyApiFallback: true
+  },
   node: {
     fs: 'empty',
     net: 'empty'

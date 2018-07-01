@@ -40,7 +40,7 @@ const Container = ({
 }): React.Element<*> => (
   <Wrapper>
     {content}
-    {rootStore.user}
+    {rootStore.user.name}
   </Wrapper>
 )
 

@@ -3,6 +3,7 @@ import { hot } from 'react-hot-loader'
 import { Route, Router, Switch } from 'react-router'
 import styled from 'styled-components'
 import Home from '../Home'
+import Profile from '../Profile'
 
 const Container = styled.div`
   width: 100%;
@@ -13,8 +14,8 @@ const App = ({ history }: { history: History }): React.Element<*> => (
   <Container>
     <Router history={history}>
       <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/" component={Home} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/profile" component={Profile} />
       </Switch>
     </Router>
   </Container>

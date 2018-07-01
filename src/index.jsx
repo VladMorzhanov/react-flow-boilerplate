@@ -1,7 +1,7 @@
 // @flow
 
-import * as React from 'react'
-import * as ReactDOM from 'react-dom'
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { Provider } from 'mobx-react'
 import { createBrowserHistory } from 'history'
 import { createStores, StoresType } from './stores/createStore'
