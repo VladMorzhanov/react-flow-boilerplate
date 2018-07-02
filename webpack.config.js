@@ -5,6 +5,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const WebpackMd5Hash = require('webpack-md5-hash')
 
+const sourcePath = path.join(__dirname, './src')
+
 module.exports = {
   devtool: 'eval',
   context: path.join(__dirname, 'src'),
@@ -13,6 +15,9 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: '/'
+  },
+  watchOptions: {
+    poll: true
   },
   resolve: {
     extensions: ['.js', '.jsx']
@@ -52,7 +57,13 @@ module.exports = {
     new WebpackMd5Hash()
   ],
   devServer: {
-    historyApiFallback: true
+    contentBase: sourcePath,
+    hot: true,
+    inline: true,
+    historyApiFallback: {
+      disableDotRule: true
+    },
+    stats: 'minimal'
   },
   node: {
     fs: 'empty',

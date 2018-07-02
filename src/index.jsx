@@ -1,22 +1,27 @@
 // @flow
 
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { Provider } from 'mobx-react'
-import { createBrowserHistory } from 'history'
-import { createStores, StoresType } from './stores/createStore'
+import * as React from 'react'
+import { render } from 'react-dom'
+import { AppContainer } from 'react-hot-loader'
 import App from './containers/App'
-import UserModel from './models/UserModel'
 import './assets/styles/main.scss'
 
-const history: History = createBrowserHistory()
-const defautlUser: UserModel = UserModel.create({ name: 'Default Name' })
-const stores: StoresType = createStores(history, defautlUser)
-
-const root: React.Element<*> = (
-  <Provider {...stores}>
-    <App history={history} />
-  </Provider>
+render(
+  <AppContainer>
+    <App />
+  </AppContainer>,
+  document.getElementById('app')
 )
 
-ReactDOM.render(root, document.getElementById('app'))
+if (module.hot) {
+  module.hot.accept('./containers/App', () => {
+    const NextApp = require('./containers/App').default
+
+    render(
+      <AppContainer>
+        <NextApp />
+      </AppContainer>,
+      document.getElementById('app')
+    )
+  })
+}
