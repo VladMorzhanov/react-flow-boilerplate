@@ -1,5 +1,7 @@
 # React Flow Boilerplate
 
+<img src="https://i.imgur.com/n4t95RX.png"/>
+
 React + Flow Boilerplate allows you to start new web project from scratch using React, Flow, Mobx-State-Tree, Mobx and Styled components.
 Based on <a href="https://github.com/VladMorzhanov/mst-react-boilerplate">Mobx-State-Tree React Boilerplate</a>
 
