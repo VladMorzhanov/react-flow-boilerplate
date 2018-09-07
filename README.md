@@ -40,7 +40,7 @@ flow coverage
 - Supports styled components.
 - Supports hot-module-reload.
 
-# Main technologies and libraries
+## Main technologies and libraries
 
 - <a href="https://reactjs.org/">React</a>
 - <a href="https://flow.org/">Flow</a>
