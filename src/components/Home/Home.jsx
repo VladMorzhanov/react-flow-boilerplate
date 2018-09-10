@@ -2,9 +2,9 @@
 
 import React from 'react'
 import { inject, observer } from 'mobx-react'
-import Header from '../../components/Header'
-import RootStore from '../../stores/RootStore'
-import Container from '../../components/Container'
+import RootStore from '../../stores/rootStore'
+import Header from '../shared/Header/Header'
+import Container from '../shared/Container/Container'
 
 const Home = ({ rootStore }: { rootStore: RootStore }): React.Element<*> => (
   <>

@@ -2,9 +2,9 @@
 
 import React from 'react'
 import { inject, observer } from 'mobx-react'
-import Header from '../../components/Header'
-import Container from '../../components/Container'
-import RootStore from '../../stores/RootStore'
+import Header from '../shared/Header/Header'
+import Container from '../shared/Container/Container'
+import RootStore from '../../stores/rootStore'
 
 const Profile = ({ rootStore }: { rootStore: RootStore }): React.Element<*> => (
   <>

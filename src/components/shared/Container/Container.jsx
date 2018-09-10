@@ -3,7 +3,7 @@
 import React from 'react'
 import styled, { type ReactComponentStyled } from 'styled-components'
 import { inject, observer } from 'mobx-react'
-import RootStore from '../../stores/RootStore'
+import RootStore from '../../../stores/rootStore'
 
 type PropsType = {
   display: string,
